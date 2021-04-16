@@ -11,11 +11,11 @@ public class Conta{
     }
 
     public void deposito(double valor){
-        this.saldo += valor;
+        this.setSaldo(this.getSaldo() + valor);
     }
 
     public void saque(double valor){
-        
+        this.setSaldo(this.getSaldo() - valor);
     }
 
     public String getNome(){

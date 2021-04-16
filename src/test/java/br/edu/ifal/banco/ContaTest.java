@@ -29,6 +29,6 @@ public class ContaTest{
     public void saqueTest(){
         double saldoAntigo = c.getSaldo();
         c.saque(20f);
-        assertEquals(180, saldoAntigo - 20f);
+        assertEquals(20f, saldoAntigo - c.getSaldo());
     }
 }
