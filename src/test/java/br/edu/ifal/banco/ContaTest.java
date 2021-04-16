@@ -1,7 +1,7 @@
 package br.edu.ifal.banco;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+//import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,7 +21,8 @@ public class ContaTest{
     @Test
     public void depositoTest() {
         double saldoAntigo = c.getSaldo();
-        assertEquals((c.getSaldo() - saldoAntigo) == 10f, c.deposito(10f));
+        c.deposito(10f);
+        assertEquals(10, c.getSaldo() - saldoAntigo);
     }
 
 }
