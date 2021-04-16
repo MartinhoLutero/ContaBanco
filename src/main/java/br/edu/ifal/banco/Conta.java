@@ -1,12 +1,9 @@
-package banco;
-
-import java.lang.reflect.Constructor;
-
+package br.edu.ifal.banco;
 public class Conta{
     private String nome;
     private double saldo;
 
-    Constructor(String nome, double saldo){
+    public Conta (String nome, double saldo){
         this.nome = nome;
         this.saldo = saldo;
 
@@ -14,7 +11,7 @@ public class Conta{
     }
 
     public void deposito(double valor){
-
+        this.saldo += valor;
     }
 
     public void sacar(double valor){
@@ -29,11 +26,11 @@ public class Conta{
         this.nome = nome;
     }
 
-    public boolean getSaldo(){
+    public double getSaldo(){
         return this.saldo;
     }
 
-    public void setSaldo(boolean saldo){
+    public void setSaldo(double saldo){
         this.saldo = saldo;
     }
 
