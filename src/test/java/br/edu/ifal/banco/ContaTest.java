@@ -22,7 +22,13 @@ public class ContaTest{
     public void depositoTest() {
         double saldoAntigo = c.getSaldo();
         c.deposito(10f);
-        assertEquals(10, c.getSaldo() - saldoAntigo);
+        assertEquals(10f, c.getSaldo() - saldoAntigo);
     }
 
+    @Test
+    public void saqueTest(){
+        double saldoAntigo = c.getSaldo();
+        c.saque(20f);
+        assertEquals(180, saldoAntigo - 20f);
+    }
 }

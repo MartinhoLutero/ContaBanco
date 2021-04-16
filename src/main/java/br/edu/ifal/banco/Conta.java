@@ -14,7 +14,7 @@ public class Conta{
         this.saldo += valor;
     }
 
-    public void sacar(double valor){
+    public void saque(double valor){
         
     }
 
