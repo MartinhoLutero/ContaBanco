@@ -3,6 +3,9 @@ public class Conta{
     private String nome;
     private double saldo;
 
+    public class SaldoInsuficiente extends Exception {
+    }
+
     public Conta (String nome, double saldo){
         this.nome = nome;
         this.saldo = saldo;
@@ -35,3 +38,11 @@ public class Conta{
     }
 
 }
+
+// public void deposito(double valor, InputMismatchException erroSaldo){
+//     if(valor <= this.getSaldo() && this.getSaldo() > 0){
+//         this.setSaldo(this.getSaldo() + valor);
+//     }else{
+//         System.err.println("SaldoInsuficiente!");
+//     }
+// }

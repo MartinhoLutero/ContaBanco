@@ -2,11 +2,12 @@ package br.edu.ifal.banco;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 //import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-// import br.edu.ifal.banco.Conta.deposito;
+ import br.edu.ifal.banco.Conta.SaldoInsuficiente;
 // import br.edu.ifal.banco.Conta.sacar;
 // import br.edu.ifal.banco.Conta.getSaldo;
 
@@ -31,4 +32,12 @@ public class ContaTest{
         c.saque(20f);
         assertEquals(20f, saldoAntigo - c.getSaldo());
     }
+
+    @Test
+    public void exceptionSaldoInsufiente(){
+        assertThrows(SaldoInsuficiente.class,
+        () ->{c.saque(210f);});
+
+    }
+
 }
